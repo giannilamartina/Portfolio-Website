@@ -12,6 +12,7 @@
   }
 
 body {
+    font-family: 'Roboto', sans-serif;
     color: var(--main-white);
 }
 
@@ -31,6 +32,50 @@ body {
     margin-right: 4rem;
 }
 
+@media (max-width: 28.75em) {
+    .nav {
+      justify-content: center;
+    }
+    
+    .nav-list {
+      margin: 0 1rem;
+    }
+}
+
+.nav-list a {
+    display: block;
+    font-size: 1.5rem;
+}
+
+.nav-list a:hover {
+    color: var(--main-red);
+    transition: color 1s ease-in-out;
+}
+
+h1, h2 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 10;
+    text-align: center;
+}
+
+h1 {
+    font-size: 5rem;
+
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;  
+    color: var(--main-white); 
+}
+
 .welcome-section {
     display: flex;
     flex-direction: column;
@@ -38,4 +83,5 @@ body {
     align-items: center;
     width: 100%;
     height: 100vh;
+    background: var(--main-darkblue);
 }
