@@ -1,0 +1,27 @@
+:root {
+    --main-white: #F8E9A1;
+    --main-red: #F76C7C;
+    --main-lightblue: #A8D0E6;
+    --main-medblue: #374785;
+    --main-darkblue: #24305E;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+body {
+    color: var(--main-white);
+}
+
+nav {
+    display: flex;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: var(--main-darkblue);
+    box-shadow: 0 2px 0 var(--main-medblue);
+}
