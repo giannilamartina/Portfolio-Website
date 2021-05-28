@@ -24,7 +24,7 @@ body {
     left: 0;
     width: 100%;
     background: var(--main-darkblue);
-    box-shadow: 0 5px 0 var(--main-medblue);
+    box-shadow: 0 5px 0 var(--main-red);
 }
 
 .nav-list {
@@ -45,32 +45,32 @@ body {
     display: block;
     font-size: 1.5rem;
     padding: 10px;
-    transition: color .25s linear;
+    transition: color .5s linear;
 }
 
 .nav-list a:hover {
     color: var(--main-red);
-    transition: color .25s linear;
+    transition: color .5s linear;
 }
 
 a {
-    transition: color .25s linear;
+    transition: color .5s linear;
 }
 
 a:hover {
     color: var(--main-red);
-    transition: color .25s linear;
+    transition: color .5s linear;
 }
 
 h1, h2 {
     font-family: 'Roboto', sans-serif;
     font-weight: 10;
     text-align: center;
+    cursor: default;
 }
 
 h1 {
     font-size: 5rem;
-
 }
 
 h2 {
@@ -84,6 +84,16 @@ ul {
 a {
     text-decoration: none;  
     color: var(--main-white); 
+}
+
+p {
+    cursor: default;
+    transition: color 1s linear;
+}
+
+p:hover {
+    color: var(--main-red);
+    transition: color 1s linear;
 }
 
 .about {
@@ -106,12 +116,12 @@ a {
 .portfolio-section {
     text-align: center;
     padding: 10rem 2rem;
-    background: var(--main-white);
-    color: var(--main-medblue);
+    background: var(--main-lightblue);
+    color: var(--main-darkblue);
 }
 
 .portfolio-section-header {
     max-width: 640px;
     margin: 0 auto 6rem auto;
-    border-bottom: 0.2rem solid var(--main-lightblue);
+    border-bottom: 0.2rem solid var(--main-darkblue);
 }
