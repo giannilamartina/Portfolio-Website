@@ -58,7 +58,7 @@ a {
 }
 
 a:hover {
-    color: var(--main-red);
+    color: var(--main-lightblue);
     transition: color .5s linear;
 }
 
@@ -75,7 +75,14 @@ h1 {
 
 h2 {
     font-size: 2.5rem;
+    transition: color .5s linear;
 }
+
+h2:hover {
+    color: var(--main-red);
+    transition: color .5s linear;
+}
+
 
 ul {
     list-style: none;
@@ -92,7 +99,7 @@ p {
 }
 
 p:hover {
-    color: var(--main-red);
+    color: var(--main-lightblue);
     transition: color 1s linear;
 }
 
@@ -125,3 +132,35 @@ p:hover {
     margin: 0 auto 6rem auto;
     border-bottom: 0.2rem solid var(--main-darkblue);
 }
+
+@media (max-width: 28.75em) {
+    .portfolio-section-header {
+        font-size: 4rem;
+    }
+}
+
+/* "Automatic" image grid using no media queries */
+/*
+.portfolio-grid {
+    
+    display: grid;
+    
+}
+*/
+
+@media (max-wdith: 30.625em) {
+    .portfolio-section {
+        padding: 6rem 1rem;
+    }
+
+    .portolio-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.portfolio {
+    background: var(--main-medblue);
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    border-radius: 2px;
+}
+
