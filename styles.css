@@ -190,3 +190,7 @@ p:hover {
     padding: 0 2 rem;
     background: linear-gradient(var(--main-darkblue),var(--main-red));
 }
+
+.contact-section-header > h2 {
+    font-size: 6rem;
+}
