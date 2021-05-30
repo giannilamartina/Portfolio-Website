@@ -114,7 +114,7 @@ p:hover {
     align-items: center;
     width: 100%;
     height: 100vh;
-    background: var(--main-darkblue);
+    background: linear-gradient(var(--main-red),var(--main-darkblue));
     
 }
 
@@ -194,3 +194,10 @@ p:hover {
 .contact-section-header > h2 {
     font-size: 6rem;
 }
+
+@media (max-width: 28.75em) {
+    .contact-section-header > h2 {
+        font-size: 4rem;
+    }
+}
+
