@@ -100,6 +100,9 @@ a {
 p {
     cursor: default;
     transition: color 1s linear;
+    max-width: 50%;
+    text-align: center;
+    
 }
 
 p:hover {
@@ -122,6 +125,15 @@ p:hover {
     height: 40%;
     border-radius: 50%;
     margin: 25px 0;
+}
+
+#headshot { /* This is for the zoom effect */
+    transform-origin: 65% 75%;
+    transition: transform 1s, filter .5s ease-out;
+}
+
+#headshot:hover {
+    transform: scale(1.1);
 }
 
 .portfolio-section {
