@@ -1,6 +1,6 @@
 :root {
     --main-white: #F8E9A1;
-    --main-red: #F76C7C;
+    --main-green: #558776;
     --main-lightblue: #A8D0E6;
     --main-medblue: #374785;
     --main-darkblue: #24305E;
@@ -28,7 +28,7 @@ body {
     left: 0;
     width: 100%;
     background: var(--main-darkblue);
-    box-shadow: 0 5px 0 var(--main-red);
+    box-shadow: 0 5px 0 var(--main-green);
 }
 
 .nav-list {
@@ -53,7 +53,7 @@ body {
 }
 
 .nav-list a:hover {
-    color: var(--main-red);
+    color: var(--main-green);
     transition: color .5s linear;
 }
 
@@ -83,7 +83,7 @@ h2 {
 }
 
 h2:hover {
-    color: var(--main-red);
+    color: var(--main-green);
     transition: color .5s linear;
 }
 
@@ -100,8 +100,9 @@ a {
 p {
     cursor: default;
     transition: color 1s linear;
-    max-width: 50%;
+    max-width: 85%;
     text-align: center;
+    line-height: 2em;
     
 }
 
@@ -117,8 +118,8 @@ p:hover {
     align-items: center;
     width: 100%;
     height: 100vh;
-    background: linear-gradient(var(--main-red),var(--main-darkblue));
-    
+    background: linear-gradient(var(--main-green),var(--main-darkblue));
+    padding-top: 10%;
 }
 
 #headshot {
@@ -146,13 +147,15 @@ p:hover {
 .portfolio-section-header {
     max-width: 640px;
     margin: 0 auto 6rem auto;
-    border-bottom: 0.2rem solid var(--main-red);
+    border-bottom: 0.2rem solid var(--main-green);
 }
 
 @media (max-width: 28.75em) {
     .portfolio-section-header {
         font-size: 4rem;
     }
+
+    
 }
 
 /* "Automatic" image grid using no media queries */
@@ -171,6 +174,7 @@ p:hover {
 
     .portolio-grid {
         grid-template-columns: 1fr;
+        
     }
 }
 
@@ -200,7 +204,7 @@ p:hover {
     width: 100%;
     height: 80vh;
     padding: 0 2 rem;
-    background: linear-gradient(var(--main-darkblue),var(--main-red));
+    background: linear-gradient(var(--main-darkblue),var(--main-green));
 }
 
 .contact-section-header > h2 {
