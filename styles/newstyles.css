@@ -1,0 +1,192 @@
+:root {
+    --main-white: #FAF3F3;
+    --main-lightgrey: #E1E5EA;
+    --main-darkgrey: #A7BBC7;
+    --main-red: #DA7F8F;
+    --main-blue: #5EAAA8;
+    --main-black: #151515;
+}
+
+/* Base reset */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* box-sizing and font sizing */
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    /* Set font size for easy rem calculations
+    * default document font size = 16px, 1rem = 16px, 100% = 16px
+    * (100% / 16px) * 10 = 62.5%, 1rem = 10px, 62.5% = 10px
+    */
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+/* 1200px / 16px = 75em */
+@media (max-width: 75em) {
+    html {
+        font-size: 60%;
+    }
+}
+
+/* 980px / 16px = 61.25em */
+@media (max-width: 61.25em) {
+    html {
+        font-size: 58%;
+    }
+}
+
+/* 460px / 16px = 28.75em */
+@media (max-width: 28.75em) {
+    html {
+        font-size: 55%;
+    }
+}
+
+/* Base styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.8rem; /* 18px */
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--main-black);
+}
+
+h1, h2 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 10;
+    text-align: center;
+    cursor: default;
+}
+
+h1 {
+    font-size: 5rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+    transition: color .5s linear;
+}
+
+h2:hover {
+    color: var(--main-red);
+    transition: color .5s linear;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;  
+    color: var(--main-blue); 
+    transition: color .5s linear;
+}
+
+a:hover {
+    color: var(--main-red);
+    transition: color .5s linear;
+}
+
+p {
+    cursor: default;
+    transition: color 1s linear;
+    max-width: 85%;
+    text-align: center;
+    line-height: 2em;
+    
+}
+
+p:hover {
+    color: var(--main-lightblue);
+    transition: color 1s linear;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--main-lightgrey);
+
+}
+
+.nav-list {
+    display: flex;
+    margin-right: 2rem;
+}
+
+@media (max-width: 28.75em) {
+    .nav {
+        justify-content: center;
+    }
+
+    .nav-list {
+        margin: 0 1rem;
+    }
+}
+
+.nav-list a {
+    display: block;
+    font-size: 2.2rem;
+    padding: 2rem;
+    transition: color .5s linear;
+}
+
+.nav-list a:hover {
+    color: var(--main-red);
+    transition: color .5s linear;
+}
+
+/* About Section */
+.about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--main-white);
+}
+
+#headshot {
+    height: 40%;
+    border-radius: 50%;
+    margin: 25px 0;
+}
+
+#headshot { /* This is for the zoom effect */
+    transform-origin: 65% 75%;
+    transition: transform 1s, filter .5s ease-out;
+}
+
+#headshot:hover {
+    transform: scale(1.1);
+}
+
+/* Portfolio section */
+.portfolio-section {
+    text-align: center;
+    padding: 10rem 2rem;
+    background: var(--main-white);
+}
+
+.portfolio-section-header {
+    max-width: 640px;
+    margin: 0 auto 6rem auto;
+    border-bottom: 0.2rem solid var(--main-blue);
+}
+
+@media (max-width: 28.75em) {
+    .portfolio-section-header {
+        font-size: 4rem;
+    }
+}
