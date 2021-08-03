@@ -116,7 +116,6 @@ p:hover {
     left: 0;
     width: 100%;
     background-color: var(--main-lightgrey);
-
 }
 
 .nav-list {
@@ -155,6 +154,14 @@ p:hover {
     width: 100%;
     height: 100vh;
     background-color: var(--main-white);
+    padding-top: 15vh;
+}
+
+@media (max-width: 60em) {
+    .about {
+        padding-top: 10vh
+    }
+
 }
 
 #headshot {
@@ -189,6 +196,7 @@ p:hover {
     .portfolio-section-header {
         font-size: 4rem;
     }
+
 }
 
 /* "Automatic" image grid using no media queries */
