@@ -157,9 +157,9 @@ p:hover {
     padding-top: 15vh;
 }
 
-@media (max-width: 60em) {
+@media (max-width: 50em) {
     .about {
-        padding-top: 10vh
+        padding-top: 20vh
     }
 
 }
