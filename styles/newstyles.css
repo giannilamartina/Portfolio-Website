@@ -116,6 +116,7 @@ p:hover {
     left: 0;
     width: 100%;
     background-color: var(--main-lightgrey);
+    
 }
 
 .nav-list {
@@ -154,16 +155,10 @@ p:hover {
     width: 100%;
     height: 100vh;
     background-color: var(--main-white);
-    padding-top: 15vh;
-    padding-bottom: 15vh;
+    padding-top: 20vh;
 }
 
-@media (max-width: 50em) {
-    .about {
-        padding-top: 20vh
-    }
 
-}
 
 #headshot {
     height: 40%;
