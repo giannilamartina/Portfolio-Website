@@ -175,6 +175,23 @@ p:hover {
     transform: scale(1.1);
 }
 
+/* Stack section */
+
+.stack {
+    text-align: center;
+    background-color: var(--main-white);
+    padding-top: 10vh;
+}
+
+#technology {
+    transform-origin: 65% 75%;
+    transition: transform .3s, filter .5s ease-out;
+}
+
+#technology:hover {
+    transform: scale(1.05);
+}
+
 /* Portfolio section */
 .portfolio-section {
     text-align: center;
