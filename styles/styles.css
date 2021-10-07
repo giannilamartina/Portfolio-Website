@@ -176,7 +176,7 @@ p:hover {
 }
 
 #headshot:hover {
-    transform: scale(1.1);
+    /*transform: scale(1.1);*/
 }
 
 /* Stack section */
