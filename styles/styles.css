@@ -1,71 +1,61 @@
 :root {
-    --main-white: #F8E9A1;
-    --main-green: #558776;
-    --main-lightblue: #A8D0E6;
-    --main-medblue: #374785;
-    --main-darkblue: #24305E;
+    --main-white: #FAF3F3;
+    --main-lightgrey: #BBE1FA;
+    --main-darkgrey: #A7BBC7;
+    --main-red: #DA7F8F;
+    --main-blue: #0F52BA;
+    --main-black: #151515;
 }
 
+/* Base reset */
 * {
     margin: 0;
     padding: 0;
-  }
+}
+
+/* box-sizing and font sizing */
+*, *::before, *::after {
+    box-sizing: inherit;
+}
 
 html {
-    overflow-y: scroll;
-    -webkit-overflow-scrolling: touch;
+    box-sizing: border-box;
+    /* Set font size for easy rem calculations
+    * default document font size = 16px, 1rem = 16px, 100% = 16px
+    * (100% / 16px) * 10 = 62.5%, 1rem = 10px, 62.5% = 10px
+    */
+    font-size: 62.5%;
     scroll-behavior: smooth;
 }
 
+/* 1200px / 16px = 75em */
+@media (max-width: 75em) {
+    html {
+        font-size: 60%;
+    }
+}
+
+/* 980px / 16px = 61.25em */
+@media (max-width: 61.25em) {
+    html {
+        font-size: 58%;
+    }
+}
+
+/* 460px / 16px = 28.75em */
+@media (max-width: 28.75em) {
+    html {
+        font-size: 55%;
+    }
+}
+
+/* Base styles */
 body {
     font-family: 'Roboto', sans-serif;
-    color: var(--main-white);
-}
-
-.nav {
-    display: flex;
-    justify-content: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background: var(--main-darkblue);
-    box-shadow: 0 5px 0 var(--main-green);
-}
-
-.nav-list {
-    display: flex;
-}
-
-@media (max-width: 28.75em) {
-    .nav {
-      justify-content: center;
-    }
-    
-    .nav-list {
-      margin: 0 1rem;
-    }
-}
-
-.nav-list a {
-    display: block;
-    font-size: 1.5rem;
-    padding: 10px;
-    transition: color .5s linear;
-}
-
-.nav-list a:hover {
-    color: var(--main-green);
-    transition: color .5s linear;
-}
-
-a {
-    transition: color .5s linear;
-}
-
-a:hover {
-    color: var(--main-lightblue);
-    transition: color .5s linear;
+    font-size: 1.8rem; /* 18px */
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--main-black);
 }
 
 h1, h2 {
@@ -85,10 +75,9 @@ h2 {
 }
 
 h2:hover {
-    color: var(--main-green);
+    color: var(--main-red);
     transition: color .5s linear;
 }
-
 
 ul {
     list-style: none;
@@ -96,7 +85,13 @@ ul {
 
 a {
     text-decoration: none;  
-    color: var(--main-white); 
+    color: var(--main-blue); 
+    transition: color .5s linear;
+}
+
+a:hover {
+    color: var(--main-red);
+    transition: color .5s linear;
 }
 
 p {
@@ -113,6 +108,45 @@ p:hover {
     transition: color 1s linear;
 }
 
+.nav {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--main-lightgrey);
+    
+}
+
+.nav-list {
+    display: flex;
+    margin-right: 2rem;
+}
+
+@media (max-width: 28.75em) {
+    .nav {
+        justify-content: center;
+    }
+
+    .nav-list {
+        margin: 0 1rem;
+    }
+}
+
+.nav-list a {
+    display: block;
+    font-size: 2.2rem;
+    padding: 2rem;
+    transition: color .5s linear;
+}
+
+.nav-list a:hover {
+    color: var(--main-red);
+    transition: color .5s linear;
+}
+
+/* About Section */
 .about {
     display: flex;
     flex-direction: column;
@@ -120,9 +154,15 @@ p:hover {
     align-items: center;
     width: 100%;
     height: 100vh;
-    background: linear-gradient(var(--main-green),var(--main-darkblue));
-    padding-top: 10%;
+    background-color: var(--main-white);
+    padding-top: 5vh;
 }
+
+.paragraph {
+    margin: 0;
+    width: 100%;
+}
+
 
 #headshot {
     height: 40%;
@@ -139,17 +179,34 @@ p:hover {
     transform: scale(1.1);
 }
 
+/* Stack section */
+
+.stack {
+    text-align: center;
+    background-color: var(--main-white);
+    padding-top: 10vh;
+}
+
+#technology {
+    transform-origin: 65% 75%;
+    transition: transform .3s, filter .5s ease-out;
+}
+
+#technology:hover {
+    transform: scale(1.05);
+}
+
+/* Portfolio section */
 .portfolio-section {
     text-align: center;
     padding: 10rem 2rem;
-    background: var(--main-darkblue);
-    color: var(--main-white);
+    background: var(--main-white);
 }
 
 .portfolio-section-header {
     max-width: 640px;
     margin: 0 auto 6rem auto;
-    border-bottom: 0.2rem solid var(--main-green);
+    border-bottom: 0.2rem solid var(--main-blue);
 }
 
 @media (max-width: 28.75em) {
@@ -157,33 +214,42 @@ p:hover {
         font-size: 4rem;
     }
 
-    
 }
 
 /* "Automatic" image grid using no media queries */
-/*
 .portfolio-grid {
-    
     display: grid;
-    
+    grid-template-columns: repeat(auto-fit,minmax(320px, 1fr));
+    grid-gap: 4rem;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    margin-bottom: 6rem;
 }
-*/
 
 @media (max-width: 30.625em) {
     .portfolio-section {
         padding: 6rem 1rem;
     }
 
-    .portolio-grid {
+    .portfolio-grid {
         grid-template-columns: 1fr;
-        
     }
 }
 
 .portfolio {
-    background: var(--main-medblue);
+    background: var(--main-white);
     box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
     border-radius: 2px;
+}
+
+.code {
+    color: var(--main-red);
+    transition: color 0.3 ease-out;
+}
+
+.portfolio:hover .code {
+    color: var(--main-blue);
 }
 
 .portfolio-image {
@@ -195,8 +261,10 @@ p:hover {
 .portfolio-title {
     font-size: 2rem;
     padding: 2rem 0.5rem;
+    
 }
 
+/* Contact section */
 .contact-section {
     display: flex;
     flex-direction: column;
@@ -206,7 +274,7 @@ p:hover {
     width: 100%;
     height: 80vh;
     padding: 0 2 rem;
-    background: linear-gradient(var(--main-darkblue),var(--main-green));
+    background: var(--main-lightgrey)
 }
 
 .contact-section-header > h2 {
@@ -219,3 +287,11 @@ p:hover {
     }
 }
 
+#connect {
+    transform-origin: 65% 75%;
+    transition: transform .3s, filter .5s ease-out;
+}
+
+#connect:hover {
+    transform: scale(1.05);
+}
