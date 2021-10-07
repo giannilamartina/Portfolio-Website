@@ -1,9 +1,9 @@
 :root {
     --main-white: #FAF3F3;
-    --main-lightgrey: #E1E5EA;
+    --main-lightgrey: #BBE1FA;
     --main-darkgrey: #A7BBC7;
     --main-red: #DA7F8F;
-    --main-blue: #5EAAA8;
+    --main-blue: #0F52BA;
     --main-black: #151515;
 }
 
@@ -281,4 +281,13 @@ p:hover {
     .contact-section-header > h2 {
         font-size: 4rem;
     }
+}
+
+#connect {
+    transform-origin: 65% 75%;
+    transition: transform .3s, filter .5s ease-out;
+}
+
+#connect:hover {
+    transform: scale(1.05);
 }

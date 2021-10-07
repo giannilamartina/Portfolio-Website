@@ -1,66 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Gianni LaMartina</title>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gianni LaMartina</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="styles/styles.css" rel="stylesheet"/>
+        <link href="styles/newstyles.css" rel="stylesheet"/>
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
         integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
         crossorigin="anonymous"/>
-    </head>
-    <body>
+</head>
+<body>
+    <!-- Nav Section -->
+    <nav id="navbar" class="nav">
+        <ul class="nav-list">
+            <li>
+                <a href="#about">About</a>
+            </li>
+            <li>
+                <a href="#portfolio">Portfolio</a>
+            </li>
+            <li>
+                <a href="#contact">Contact</a>
+            </li>
+        </ul>
+    </nav>
+    <!-- About Section -->
+    <section id="about" class="about">
+        <h1>Hey there, I'm <a href="https://linkedin.com/in/lamartinagianni" target="_blank">Gianni LaMartina</a>.</h1>
+        <img id="headshot" src="/images/headshot.jpg" alt="Gianni's Headshot">
+        <p>Your friendly neighborhood web developer.</p>
+        <p>Yes, you can call me a web-slinger.</p>
+        <p>I'm a fullstack web developer with a background in IT and computer science.</p>
+        <p>My years of experience selling and supporting software and hardware have developed ;) my passion for coding and building solutions.</p>
+        <p>I recently graduated from Johnson County Community College with an AS degree and am studying IT at the University of Kansas.</p>
+        </p>
+    </section>
+    <section id="stack" class="stack">
+        <h1>Technologies</h1>
+        <i id="technology" class="fab fa-html5 fa-5x" style="color: blue"></i>
+        <i id="technology" class="fab fa-css3-alt fa-5x" style="color: red"></i>
+        <i id="technology" class="fab fa-js fa-5x" style="color:orange"></i>
+        <i id="technology" class="fab fa-react fa-5x" style="color:lightblue"></i>
+        <i id="technology" class="fab fa-java fa-5x" style="color: brown"></i>
+        <i id="technology" class="fab fa-python fa-5x" style="color: yellowgreen"></i>
+        <i id="technology" class="fab fa-bootstrap fa-5x" style="color: purple"></i>
 
-        <!-- Nav Section-->
-        <nav id="navbar" class="nav">
-            <ul class="nav-list">
-                <li>
-                    <a href="#about">About</a>
-                </li>
-                <li>
-                    <a href="#portfolio">Portfolio</a>
-                </li>
-                <li>
-                    <a href="#contact">Contact</a>
-                </li>
-            </ul>
-        </nav>
 
-        <!-- Welcome Section -->
-        <section id="about" class="about">
-            <h1>Hey there, I'm <a href="https://linkedin.com/in/lamartinagianni" target="_blank">Gianni LaMartina</a>.</h1>
-            <img id="headshot" src="/images/headshot.jpg" alt="Gianni's Headshot">
-            <p>Your friendly neighborhood web developer.</p>
-            <p>Yes, you can call me a web-slinger.</p>
-            <p>I'm a fullstack web developer with a background in IT and computer science.</p>
-            <p>My years of experience selling and supporting software and hardware have developed ;) my passion for coding and building solutions.</p>
-            <p>I recently graduated from Johnson County Community College with an AS degree and am studying IT at the University of Kansas.</p>
-            </p>
-        </section>
-        
-        <!-- Projects Section -->
-        <section id="portfolio" class="portfolio-section">
-            <h2 class="portfolio-section-header">My Portfolio</h2>
-                <div class="portfolio-grid">
-                    <blockquote class="imgur-embed-pub" lang="en" data-id="LOcXw3y"><a href="https://imgur.com/LOcXw3y" class="porfolio portfolio-tile"><img class="portfolio-image">View post on imgur.com</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
-                    <p class="portfolio-title"><span class="code">&lt;</span>Technical Documentation Page<span class="code">&#47;&gt;</span>
-            </p>
-                </div>
-        </section>
-
-        <!-- Contact Section-->
-        <section id="contact" class="contact-section">
-            <div class="contact-section-header">
-                <h2>Let's Connect</h2>
+    </section>
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio-section">
+        <h2 class="portfolio-section-header">My Portfolio</h2>
+            <div class="portfolio-grid">
+                <p class="portfolio-title"></p>
+                
             </div>
-            <div class="contact-links">
-                <a href="https://linkedin.com/in/lamartinagianni" target="_blank" class="btn contact-details"><i class="fab fa-5x fa-linkedin"></i></a>
-                <a href="https://twitter.com/giannilamartina/" target="_blank" class="btn contact-details"><i class="fab fa-5x fa-twitter"></i></a>
-                <a href="https://github.com/giannilamartina" target="_blank" class="btn contact-details"><i class="fab fa-5x fa-github"></i></a>
-                <a href="mailto:lamartinagianni@gmail.com" target="_blank" class="btn contact-details"><i class="far fa-5x fa-envelope"></i></a>
-            </div>
-        </section>
-    </body>
+    </section>
+    <!-- Contact Section-->
+    <section id="contact" class="contact-section">
+        <div class="contact-section-header">
+            <h2>Let's Connect</h2>
+        </div>
+        <div class="contact-links">
+            <a href="https://linkedin.com/in/lamartinagianni" target="_blank" class="btn contact-details"><i id="connect" class="fab fa-5x fa-linkedin"></i></a>
+            <a href="https://twitter.com/giannilamartina/" target="_blank" class="btn contact-details"><i id="connect" class="fab fa-5x fa-twitter"></i></a>
+            <a href="https://github.com/giannilamartina" target="_blank" class="btn contact-details"><i id="connect" class="fab fa-5x fa-github"></i></a>
+            <a href="mailto:lamartinagianni@gmail.com" target="_blank" class="btn contact-details"><i id="connect" class="far fa-5x fa-envelope"></i></a>
+        </div>
+    </section>
+</body>
 </html>
